@@ -1,8 +1,8 @@
 class Weather{
 
     constructor(apiKey){
-        this.apiBase = "http://api.openweathermap.org/data/2.5/weather?appid=" + apiKey;
-        this.imageLinkBase = "http://openweathermap.org/img/wn/";
+        this.apiBase = "https://api.openweathermap.org/data/2.5/weather?appid=" + apiKey;
+        this.imageLinkBase = "https://openweathermap.org/img/wn/";
     }
 
     async getWeatherData(city, tempUnit){
