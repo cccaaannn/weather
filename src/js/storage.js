@@ -1,7 +1,8 @@
 class Storage{
 
-    constructor(saveName){
+    constructor(saveName, defaultItems){
         this.saveName = saveName;
+        this.defaultItems = defaultItems;
     }
 
     setToStorage(items){
@@ -13,16 +14,13 @@ class Storage{
 
         // default values
         if(items === null){
-            items = {
-                city : "istanbul",
-                tempUnit : "C",
-                autoUpdate : true,
-                updateTime : 5
-            };
-
-            if(tempUnitF.checked){
-                items.tempUnit = "F";
-            }
+            // items = {
+            //     city : "istanbul",
+            //     tempUnit : "C",
+            //     autoUpdate : true,
+            //     updateTime : 5
+            // };
+            items = this.defaultItems;
         }
 
         return items

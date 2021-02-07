@@ -19,7 +19,7 @@ let updateInterval;
 
 // init classes
 weather = new Weather("8f8b404261804f45ab9d948fa7409f0d");  // openweathermap api key, please don't steal it it is free -__-
-storage = new Storage("weatherData");
+storage = new Storage("weatherData", {city : "istanbul", tempUnit : "C", autoUpdate : true, updateTime : 5});
 ui = new UI(["1","2","3","4","5","10","15","20","30","60"]);
 
 
