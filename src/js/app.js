@@ -8,7 +8,7 @@ const updateCheckBox = document.getElementById('update');
 const updateTimeSelectBox = document.getElementById("update_time");
 
 // eventListeners
-document.addEventListener("DOMContentLoaded", initUi);
+document.addEventListener("DOMContentLoaded", init);
 tempUnitDiv.addEventListener("change", getWeather);
 cityTextArea.addEventListener("change", getWeather);
 updateCheckBox.addEventListener("change", changeAutoUpdate);
@@ -25,7 +25,11 @@ ui = new UI(["1","2","3","4","5","10","15","20","30","60"]);
 
 
 
-function initUi(){
+function init(){
+
+    // service worker for pwa
+    registerServiceWorker();
+
     // get saved info from storage and set the ui
     ui.setFormInfo(storage.getFromStorage());
 
@@ -80,5 +84,17 @@ function getWeather(){
         ui.displayToastMessages("error", 2, "Can not find the city");
     });
 
+}
+
+
+function registerServiceWorker(){
+    if("serviceWorker" in navigator){
+        navigator.serviceWorker.register("sw.js").then(registration => {
+
+        }).catch(error => {
+            console.log("service worker can not registered");
+            console.log(error);
+        })
+    }
 }
 
