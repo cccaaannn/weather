@@ -1,0 +1,32 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Simple weather app",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cccaaannn/weather.git"
+  },
+  "keywords": [],
+  "author": "Can Kurt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cccaaannn/weather/issues"
+  },
+  "homepage": "https://cccaaannn.github.io/weather/",
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "gh-pages": "^3.2.3",
+    "html-loader": "^2.1.2",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
+  }
+}
