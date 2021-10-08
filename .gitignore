@@ -1,2 +1,8 @@
-#vscode
+# vscode
 .vscode
+
+# Dependency directories
+node_modules/
+
+# distribution
+dist/
